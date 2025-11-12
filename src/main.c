@@ -1,4 +1,5 @@
 #include "node.h"
+#include <stdio.h>
 
 int main() {
     Node *node = create_new_node(5);
@@ -8,10 +9,10 @@ int main() {
 
     print_node_list(node);
 
-    int length = get_node_list_length(node);
-    int *arr = node_list_to_array(node);
+    printf("\n\n");
 
-    print_node_list(array_to_node_list(arr, length));
+    node = sort_node_list(node);
+    print_node_list(node);
 
     return 0;
 }
