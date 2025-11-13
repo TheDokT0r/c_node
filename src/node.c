@@ -146,3 +146,10 @@ Node *sort_node_list(Node *node) {
   free(arr);
   return sortedList;
 }
+
+Node *change_node_list_head(Node *nodeList, Node *newHead) {
+    Node *head = get_node_list_head(nodeList);
+    head->value = newHead->value;
+
+    return head;
+}
